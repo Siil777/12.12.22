@@ -1,0 +1,130 @@
+#nimi=input("Mis on sinu nimi:")
+#tahed=list(nimi)
+#n=len(tahed)
+#print(f" {n}tahed : {tahed} ")
+#print("Remove kasutamine")
+#t=input("Sisesta taht, mis on tuleb kustutada ara")
+#nt=tahed.count(t)
+#print(nt)
+#j=0
+#if tahed.count(t)==0:
+#    print(f"{t} ei ole listis")
+#else:
+
+#    #for i in range(nt):
+       
+#    #    if tahed[i-j]==t:
+#    #       tahed.pop(i-j)
+#    #       j+=1
+#    for i in range(len(tahed)):
+#        if tahed[i-j]==t:
+#            tahed.pop(i-j)
+#            j+=1
+#    print(f"{t} ei ole listis, on jaanud {tahed}")
+
+
+
+# приклеивает список к списку list1.extend list2
+#list.append эдемент в конец саиска
+#приминяю функцию лист к ними разбить имя на символы
+# в обратную сторону
+# list.pop удаляктся последний элемент
+#list.index(x,[start[,end]]) ищет 1ый элемент 
+#list.count(x) сколько раз встречается символ
+#list.sort([key=function])
+#list.revers() переварачмваем список в обратную сторону сиртируем по умолчанию в алфавитном порядке
+#list.remove()
+#nimi=input("Mis on sinu nimi:")
+#tahed=list(nimi)
+#n=len(tahed)
+#print(f" {n}tahed : {tahed} ")
+#print("Remove kasutamine")
+#t=input("Sisesta taht, mis on tuleb kustutada ara")
+#nt=tahed.count(t)
+#print(nt)
+#j=0
+#if tahed.count(t)==0:
+#    print(f"{t} ei ole listis")
+#else:
+
+    #for i in range(nt):
+       
+    #    if tahed[i-j]==t:
+    #       tahed.pop(i-j)
+    #       j+=1
+#    for i in range(len(tahed)):
+#        if tahed[i-j]==t:
+#            tahed.pop(i-j)
+#            j+=1
+#    print(f"{t} ei ole listis, on jaanud {tahed}")
+#t=input("mis taht on tuleb")
+#print(f"taht{t} seiseb {tahed.index(t)+1}")
+
+
+#Задание 1: Почтовый индекс
+
+#В Эстонии почтовые индексы состоят из 5 чисел, где первое число обозначает уезд:
+
+#1 – Tallinn
+#2 – Narva, Narva-Jõesuu
+#3 – Kohtla-Järve
+#4 – Ida-Virumaa, Lääne-Virumaa, Jõgevamaa
+#5 – Tartu linn
+#6 – Tartumaa, Põlvamaa, Võrumaa, Valgamaa
+#7 – Viljandimaa, Järvamaa, Harjumaa, Raplamaa
+#8 – Pärnumaa
+#9 – Läänemaa, Hiiumaa, Saaremaa
+#Напишите программу, которая проверяет введенный индекс(количество символов, соответствие типу данных и т. д.) и отображает уезд, к которому он относится.
+#Option1.
+maad= [' – Tallinn',
+'   Narva', 'Narva-Jõesuu',
+'   Kohtla-Järve',
+'   Ida-Virumaa', 'Lääne-Virumaa', 'Jõgevamaa',
+'   Tartu linn'
+'   Tartumaa', 'Põlvamaa',' Võrumaa', 'Valgamaa'
+'   Viljandimaa', 'Järvamaa', 'Harjumaa',' Raplamaa'
+'   Pärnumaa'
+'   Läänemaa',' Hiiumaa',' Saaremaa']
+index=""
+n=0
+while type(index) !=int or n!=5:
+    try:
+        index=int(input("Index:"))
+        n=len(str(index))
+    except:
+        print("Vale index!")
+
+index_list=list(str(index))
+print(maad[int(index_list[0])-1])
+
+#list1= ['1 – Tallinn'
+#'2 – Narva', 'Narva-Jõesuu'
+#'3 – Kohtla-Järve'
+#'4 – Ida-Virumaa', 'Lääne-Virumaa', 'Jõgevamaa'
+#'5 – Tartu linn'
+#'6 – Tartumaa', 'Põlvamaa',' Võrumaa', 'Valgamaa'
+#'7 – Viljandimaa', 'Järvamaa', 'Harjumaa',' Raplamaa'
+#'8 – Pärnumaa'
+#'9 – Läänemaa',' Hiiumaa',' Saaremaa']
+#nimi=input("Maakond:")
+#maakond=list1(nimi)
+#n=len(list1)
+#print(f" {n}maakon : {maakond} ")
+#print("Remove kasutamine")
+#t=input("Sisesta taht, mis on tuleb kustutada ara")
+#nt=tahed.count(t)
+#print(nt)
+#j=0
+
+#Option.3
+indeks_list={1:"Tallinn",2:"Narva",3:"Kohtla Jarve"}
+
+while type(index) !=5 or index.isdigit()!=True:
+    try:
+        indeks=int(input("Index:"))
+        
+    except:
+        ValueError
+
+city=index_list.get(int(list(index)[0]))
+print(list(indeks)[0],city)
