@@ -143,32 +143,30 @@ print('consonant letter-kaashälikud:',len(c))
 #lambda список переменных-аргументов: возвращаемое значение
 
 
-#nimi=input("Mis on sinu nimi:")
-#tahed=list(nimi)
-#n=len(tahed)
-#print(f" {n}tahed : {tahed} ")
-#print("Remove kasutamine")
-#t=input("Sisesta taht, mis on tuleb kustutada ara")
-#nt=tahed.count(t)
-#print(nt)
-#j=0
-#if tahed.count(t)==0:
-#    print(f"{t} ei ole listis")
-#else:
-
-    #for i in range(nt):
+nimi=input("Mis on sinu nimi:")
+tahed=list(nimi)
+n=len(tahed)
+print(f" {n}tahed : {tahed} ")
+print("Remove kasutamine")
+t=input("Sisesta taht, mis on tuleb kustutada ara")
+nt=tahed.count(t)
+print(nt)
+j=0
+if tahed.count(t)==0:
+	print(f"{t} ei ole listis")
+else:
+       for i in range(nt):
        
-    #    if tahed[i-j]==t:
-    #       tahed.pop(i-j)
-    #       j+=1
-#    for i in range(len(tahed)):
-#        if tahed[i-j]==t:
-#            tahed.pop(i-j)
-#            j+=1
-#    print(f"{t} ei ole listis, on jaanud {tahed}")
-#t=input("mis taht on tuleb")
-#print(f"taht{t} seiseb {tahed.index(t)+1}")
-
+        if tahed[i-j]==t:
+           tahed.pop(i-j)
+       	j+=1
+       for i in range(len(tahed)):
+            if tahed[i-j]==t:
+            	tahed.pop(i-j)
+            	j+=1
+print(f"{t} ei ole listis, on jaanud {tahed}")
+t=input("kus seiseb täht")
+print(f"taht{t} seiseb {tahed.index(t)+1}")
 
 # приклеивает список к списку list1.extend list2
 #list.append эдемент в конец саиска
