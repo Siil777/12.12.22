@@ -57,7 +57,7 @@ print(our_list)
 #у вас помощи в реализации такой функции.
 
 def useless(lst):
-    return max(lst)/len(lst)
+    return max(lst)/len(lst) #max(lst) самое большое число списка/ len(lst) количество чисел в списке#
 print(useless([4,6,7]))
 print(useless([20,5,4,32,0,2,3]))
 print(useless([9.8,5,34,1.2,9,14,5,5]))
