@@ -103,6 +103,8 @@ print(usual_num)
 #['a', 'aa', 'aaa', 'aaaa', 'aaaaa']
 #['qweasdqweas', 'q', 'rteww', 'ewqqqqq']
 
+#ljust-позволяет справа от списка заполнить разницу любым символом
+
 list=['крот', 'белка', 'выхухоль']
 list1=['a', 'aa', 'aaa', 'aaaa', 'aaaaa']
 list2=['qweasdqweas', 'q', 'rteww', 'ewqqqqq']
