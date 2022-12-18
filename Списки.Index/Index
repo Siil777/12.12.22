@@ -86,13 +86,13 @@ print(usual_num)
 #['a', 'aa', 'aaa', 'aaaa', 'aaaaa']
 #['qweasdqweas', 'q', 'rteww', 'ewqqqqq']
 
-def list_a(lst):
-    max_item=max(lst,key=lambda x:len(x))
-    max_len=len(max_item)
-    return [item.ljust(max_len,'_') for item in lst]
-print(list_a(['крот','белка','выхухоль']))
-print(list_a(['a','aa','aaa','aaaa','aaaaa']))
-print(list_a(['qweasdqweas','q','rteww','ewqqqqq']))
+list=['крот', 'белка', 'выхухоль']
+list1=['a', 'aa', 'aaa', 'aaaa', 'aaaaa']
+list2=['qweasdqweas', 'q', 'rteww', 'ewqqqqq']
+
+print([x.ljust(len(max(list, key = len)), '_') for x in list])
+print([x.ljust(len(max(list1, key = len)), '_') for x in list1])
+print([x.ljust(len(max(list2, key = len)), '_') for x in list2])
 
 #Задание 6: Проверка имени
 #Надо спросить имя человека. Проверь чтобы в имени были только буквы.
