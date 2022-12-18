@@ -69,14 +69,14 @@ print(useless([9.8,5,34,1.2,9,14,5,5]))
 #option.1
 print('increase')
 k=input('num:').split()
-k.sort()
+k.sort(key=int)
 print(k)
 k=0
 while k!=1:
 	k+=1
 	print('waning')
 	v=input('num:').split()
-	v.sort(reverse=True)
+	v.sort(key=int, reverse=True)
 	print(v)
 ________________________________________________
 #option.2
