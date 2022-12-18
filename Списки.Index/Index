@@ -56,6 +56,24 @@ print(our_list)
 #Студент пока не придумал, где может пригодиться подобное значение, но ищет
 #у вас помощи в реализации такой функции.
 
+#option.1
+
+lst=[4,6,7]
+lst1=[20,5,4,32,0,2,3]
+lst2=[9.8,5,34,1.2,9,14,5,5]
+for i in range (1):
+				try:
+					lst=max(lst)/len(lst)
+					lst1=max(lst1)/len(lst1)
+					lst2=max(lst2)/len(lst2)
+				except:
+					print("")
+print(lst)
+print(lst1)
+print(lst2)
+
+#Option.2
+
 def useless(lst):
     return max(lst)/len(lst) #max(lst) самое большое число списка/ len(lst) количество чисел в списке#
 print(useless([4,6,7]))
