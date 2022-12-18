@@ -65,7 +65,24 @@ print(useless([9.8,5,34,1.2,9,14,5,5]))
 #Задание 4: Сортировка
 #Требуется создать программу, которая сортирует список чисел по убыванию/возрастанию 
 #их абсолютного значения.
-
+#option.1
+# то что сам смог. 
+print('increase')
+list0=[0,5,1,3,6,7,8,2]
+list0.sort()
+print(list0)
+print('waning')
+list1=[4,7,8,9,14,54]
+list1.sort()
+list1.reverse()
+list=[4,60,3,8,8,9,4,8]
+list.sort()
+list.reverse()
+print(list)
+print(list1)
+------------------------------------------------
+#option.2 (internet)
+#здесь как я понял лямбда присваивает множество значений сразу то есть не надо каждый раз под списком задавать sort and reverse. 
 def list_sort(choice):
     choice.sort(key=lambda x:abs(x),reverse=True)
     return choice
