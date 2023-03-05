@@ -21,13 +21,20 @@ maad=[' – Tallinn','Narva', 'Kohtla-Järve','Narva-Jõesuu','Ida-Virumaa', 'L�
 index=""
 
 n=0
+# type() function can be used to determine the data type of a value
 while type(index) !=int or n!=5:
     try:
         index=int(input("index:"))
         n=len(str(index))
     except:
         print("incorrect index")
+	
+#This makes it easier to access individual digits of the integer later in the code. index_list=list(str(index))
+
 index_list=list(str(index))
+
+#In Python, indices start from 0, we need to indices from 1, therefore, [0]-1)
+
 print(maad[int(index_list[0])-1])
 
 if int(index_list[0])-1==0 or int(index_list[0])-1==1 or int(index_list[0])-1==2:
@@ -41,8 +48,8 @@ else:
 #у пользователя. В исходном списке минимум 2 элемента.
 
 our_list=[11,10,12,13]
-our_list=input().split()
-i,j=0, len(our_list)-1
+our_list=input().split() # in this case split() helps  when the user inputs a series of numbers separated by spaces, the split() function converts the string into a list of strings, where each element in the list corresponds to a separate number.
+i,j=0, len(our_list)-1 # indices in Python start at 0, so the last index of a list of length n is n-1.
 while i<j:
     our_list[i],our_list[j]=our_list[j], our_list[i] 
     i,j = i+1,j-1
@@ -137,13 +144,17 @@ print(usual_num)
 
 #ljust-позволяет справа от списка заполнить разницу любым символом
 
-list=['крот', 'белка', 'выхухоль']
-list1=['a', 'aa', 'aaa', 'aaaa', 'aaaaa']
-list2=['qweasdqweas', 'q', 'rteww', 'ewqqqqq']
+def all_eq(lst): 
+	#The all_eq function takes a list of strings lst as an input.
+    max_item = max(lst, key=lambda x: len(x)) # key=lambda x: len(x)) returns the longest length of all the strings in the list.
+    max_len = len(max_item)
+    return [item.ljust(max_len, '_') for item in lst]
 
-print([x.ljust(len(max(list, key = len)), '_') for x in list])
-print([x.ljust(len(max(list1, key = len)), '_') for x in list1])
-print([x.ljust(len(max(list2, key = len)), '_') for x in list2])
+
+# Тесты
+print(all_eq(['крот', 'белка', 'выхухоль']))
+print(all_eq(['a', 'aa', 'aaa', 'aaaa', 'aaaaa']))
+print(all_eq(['qweasdqweas', 'q', 'rteww', 'ewqqqqq']))
 
 #Задание 6: Проверка имени
 #Надо спросить имя человека. Проверь чтобы в имени были только буквы.
@@ -158,8 +169,8 @@ print("Chers",a)
 print('total of symbols:', len(str(a)))
 a=sorted(a)
 print(a)
-glas='aeyuoi'
-sogl='qzwsxdcrvtgbhnjmklp'
+glas='aeyuoiAEYUOIA'
+sogl='qzwsxdcrvtgbhnjmklpfQWRTPSDFGHJKLZXCVBNM'
 b= []
 c= [] 
 for i in a:
